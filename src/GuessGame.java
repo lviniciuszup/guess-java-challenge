@@ -12,6 +12,7 @@ public class GuessGame {
         Scanner scn1 = new Scanner(System.in);
         int guessNum = scn1.nextInt();
 
+        numberDraw(anynumber, guessNum);
     }
     public static void numberDraw(int anynumber, int guessNum){
         if (anynumber == guessNum){
@@ -21,6 +22,9 @@ public class GuessGame {
             System.out.println("================== **** ==================");
         }else if (guessNum > anynumber){
             System.out.println("O número digitado é maior que o numero sorteado, " +
+                    "você ganhou 5 pontos! ");
+        }else if (guessNum < anynumber) {
+            System.out.println("O número digitado é menor que o numero sorteado, " +
                     "você ganhou 5 pontos! ");
         }
 
